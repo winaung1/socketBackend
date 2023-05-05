@@ -5,7 +5,7 @@ const {Server} = require('socket.io');
 const cors = require('cors')
 app.use(cors())
 const server = http.createServer(app);
-const port = 3001;
+const port = "https://winsocket.onrender.com";
 
 const io = new Server(server, {
     cors: {
@@ -29,5 +29,5 @@ io.on("connection", (socket) => {
 
 
 server.listen(port, () => {
-    console.log(`server is running on ${port}`)
+    console.log(`server is running ${port}`)
 })
